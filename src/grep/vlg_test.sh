@@ -226,4 +226,4 @@ valgrind -s -q --tool=memcheck --leak-check=yes --track-origins=yes --show-leak-
 valgrind -s -q --tool=memcheck --leak-check=yes --track-origins=yes --show-leak-kinds=all --verbose --log-file=valgrind_out.txt ./grep -o -e 1 -f patterns1.txt 1.txt > q.txt
 valgrind -s -q --tool=memcheck --leak-check=yes --track-origins=yes --show-leak-kinds=all --verbose --log-file=valgrind_out.txt ./grep -o 1 1.txt > q.txt
 
-rm -rf q.txt
+rm -rf q.txt 1.txt 2.txt 3.txt 4.txt empty.txt only_n.txt patterns1.txt patterns2.txt patterns3.txt patterns_empty.txt
