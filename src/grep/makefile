@@ -17,13 +17,15 @@ cppcheck:
 	@cppcheck --enable=all --suppress=missingIncludeSystem *.c *.h || true
 
 valgrind: rebuild
+	@cp tests/vlg_test.sh .
 	@bash vlg_test.sh
 	@cat valgrind_out.txt
-	@rm -rf grep *.txt
+	@rm -rf grep *.txt vlg_test.sh
 
 rebuild: clean grep
 
 test: rebuild
+	@cp tests/tests.sh .
 	@bash tests.sh
 	@cat log.txt
-	@rm -rf grep *.txt
+	@rm -rf grep *.txt tests.sh
